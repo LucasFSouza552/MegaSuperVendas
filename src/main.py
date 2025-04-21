@@ -684,6 +684,10 @@ if df_mod is not None:
 if df_mod is not None:
 	print("Removendo dados duplicados...")
 	df_mod = df_mod.drop_duplicates()
+ 
+ # Transforma o header (nomes das colunas) em maiúsculas
+df.columns = df.columns.str.upper()
+df_mod.columns = df_mod.columns.str.upper()
 
 # Chamando a função para salvar o DataFrame limpo
 if df_mod is not None:
